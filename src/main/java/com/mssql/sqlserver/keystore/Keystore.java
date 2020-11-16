@@ -4,7 +4,6 @@
 package com.mssql.sqlserver.keystore;
 
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +38,7 @@ public class Keystore {
 			keyStoreMap.put(storeProvider.getName(), storeProvider);
 			SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);	
 		 
-		 }catch (SQLException e) {
+		 }catch (Exception e) {
 	            e.printStackTrace();
 	     }
 		
